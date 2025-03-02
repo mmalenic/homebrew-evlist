@@ -10,12 +10,12 @@ class Evlist < Formula
   head "https://github.com/mmalenic/evlist.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/mmalenic/evlist"
+    root_url "https://github.com/mmalenic/evlist/releases/download"
     sha256 cellar:       :any_skip_relocation,
            x86_64_linux: "9ddf9d43ac47ed63cb8f066eedb8a1231e8d0e4ed85c238ec3cb3fc88a285b8f"
   end
 
-  depends_on "cmake" => :build
+  depends_on "cmake" => :builds
   depends_on "cli11"
 
   fails_with :clang do
