@@ -2,12 +2,17 @@
 
 # The homebrew formula for evlist.
 class Evlist < Formula
-  desc 'List input event devices on Unix'
+  desc 'List input event devices on Linux'
   homepage 'https://github.com/mmalenic/evlist'
   head 'https://github.com/mmalenic/evlist.git', branch: 'main'
   url 'https://github.com/mmalenic/evlist/archive/refs/tags/v1.0.0.tar.gz'
   sha256 'ebdf35057571ad82c3263ff758217297d6f198fa05bc9b961b3d5a8a7b0731f5'
   license 'MIT'
+
+  bottle do
+    sha256 cellar: :any_skip_relocation,
+           x86_64_linux: '9ddf9d43ac47ed63cb8f066eedb8a1231e8d0e4ed85c238ec3cb3fc88a285b8f'
+  end
 
   depends_on 'cmake' => :build
   depends_on 'cli11'
