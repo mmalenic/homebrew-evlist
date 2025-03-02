@@ -15,6 +15,9 @@ class Evlist < Formula
            x86_64_linux: "9ddf9d43ac47ed63cb8f066eedb8a1231e8d0e4ed85c238ec3cb3fc88a285b8f"
   end
 
+  depends_on "cmake" => :build
+  depends_on "cli11"
+
   fails_with :clang do
     version "18"
     cause "requires C++23 support"
@@ -24,9 +27,6 @@ class Evlist < Formula
     version "13"
     cause "requires C++23 support"
   end
-
-  depends_on "cmake" => :build
-  depends_on "cli11"
 
   resource "toolbelt" do
     url "https://github.com/mmalenic/cmake-toolbelt/archive/refs/tags/v0.3.0.tar.gz"
