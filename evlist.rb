@@ -17,8 +17,8 @@ class Evlist < Formula
            x86_64_linux: "1c6a6586e700201fef630362dcc74164487996d14b856ce2a7c93d011b3b6013"
   end
 
-  depends_on "cli11"
   depends_on "cmake" => :build
+  depends_on "cli11"
 
   fails_with :clang do
     version "18"
