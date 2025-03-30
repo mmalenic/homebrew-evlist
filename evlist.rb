@@ -9,10 +9,8 @@ class Evlist < Formula
   license "MIT"
   head "https://github.com/mmalenic/evlist.git", branch: "main"
 
-  sig { params(block: T.proc.bind(BottleSpecification).void).void }
-
   bottle do
-    root_url "https://github.com/mmalenic/evlist/releases/download/v1.0.2"
+    root_url "https://ghcr.io/v2/mmalenic/homebrew-evlist"
     sha256 cellar:       :any_skip_relocation,
            x86_64_linux: "1c6a6586e700201fef630362dcc74164487996d14b856ce2a7c93d011b3b6013"
   end
