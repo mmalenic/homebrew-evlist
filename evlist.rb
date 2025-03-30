@@ -18,7 +18,7 @@ class Evlist < Formula
   end
 
   depends_on "cli11"
-  depends_on "cmake" => :builds
+  depends_on "cmake" => :build
 
   fails_with :clang do
     version "18"
