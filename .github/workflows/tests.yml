@@ -18,7 +18,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
 
       - name: Install gcc
-        run: brew install gcc@14
+        run: brew install gcc@14 && ln -s /home/linuxbrew/.linuxbrew/bin/gcc-14 /usr/bin/gcc
 
       - name: Cache Homebrew Bundler RubyGems
         uses: actions/cache@v4
