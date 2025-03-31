@@ -17,6 +17,9 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
+      - name: Install clang
+        run: brew install llvm@19
+
       - name: Cache Homebrew Bundler RubyGems
         uses: actions/cache@v4
         with:
