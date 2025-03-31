@@ -24,17 +24,9 @@ jobs:
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
 
-      - run: brew test-bot --only-cleanup-before --root-url https://ghcr.io/v2/mmalenic/homebrew-evlist
-
-      - run: brew test-bot --only-setup --root-url https://ghcr.io/v2/mmalenic/homebrew-evlist
-
-      - run: brew test-bot --only-tap-syntax --root-url https://ghcr.io/v2/mmalenic/homebrew-evlist
-
-      - run: brew test-bot --only-formulae --root-url https://ghcr.io/v2/mmalenic/homebrew-evlist
-#        if: github.event_name == 'pull_request'
+      - run: brew test-bot --root-url https://ghcr.io/v2/mmalenic/homebrew-evlist
 
       - name: Upload bottles as artifact
-#        if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: bottles_${{ matrix.os }}
