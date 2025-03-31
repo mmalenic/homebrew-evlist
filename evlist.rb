@@ -18,11 +18,6 @@ class Evlist < Formula
   depends_on "cmake" => :build
   depends_on "cli11"
 
-  fails_with :clang do
-    version "18"
-    cause "requires C++23 support"
-  end
-
   fails_with :gcc do
     version "13"
     cause "requires C++23 support"
