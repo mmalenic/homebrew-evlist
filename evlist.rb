@@ -4,8 +4,8 @@
 class Evlist < Formula
   desc "List input event devices on Linux"
   homepage "https://github.com/mmalenic/evlist"
-  url "https://github.com/mmalenic/evlist/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "e1e34d0e6ef94cf5905551f1a6046fac357e0f7f20f1cdf4960c5e89d54132b8"
+  url "https://github.com/mmalenic/evlist/archive/refs/tags/v1.0.3.tar.gz"
+  sha256 "fe338593bd2862be12b7236bf0d4ee722b9db9edaadf4322afe65fd1345faaf0"
   license "MIT"
   head "https://github.com/mmalenic/evlist.git", branch: "main"
 
