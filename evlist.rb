@@ -4,24 +4,19 @@
 class Evlist < Formula
   desc "List input event devices on Linux"
   homepage "https://github.com/mmalenic/evlist"
-  url "https://github.com/mmalenic/evlist/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "e1e34d0e6ef94cf5905551f1a6046fac357e0f7f20f1cdf4960c5e89d54132b8"
+  url "https://github.com/mmalenic/evlist/archive/refs/tags/v1.0.3.tar.gz"
+  sha256 "fe338593bd2862be12b7236bf0d4ee722b9db9edaadf4322afe65fd1345faaf0"
   license "MIT"
   head "https://github.com/mmalenic/evlist.git", branch: "main"
 
   bottle do
     root_url "https://ghcr.io/v2/mmalenic/homebrew-evlist"
     sha256 cellar:       :any_skip_relocation,
-           x86_64_linux: "1c6a6586e700201fef630362dcc74164487996d14b856ce2a7c93d011b3b6013"
+           x86_64_linux: "1c6a6586e700201fef630362dcc74164487996d14b856ce2a7c93d011b3b6014"
   end
 
   depends_on "cmake" => :build
   depends_on "cli11"
-
-  fails_with :clang do
-    version "18"
-    cause "requires C++23 support"
-  end
 
   fails_with :gcc do
     version "13"
