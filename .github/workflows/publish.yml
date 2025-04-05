@@ -13,13 +13,13 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - name: Set up Homebrew
+      - id: setup-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Set up git
+      - id: setup-git
         uses: Homebrew/actions/git-user-config@master
 
-      - name: Pull bottles
+      - id: pr-pull
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
           PULL_REQUEST: ${{ github.event.pull_request.number }}
@@ -31,8 +31,7 @@ jobs:
             --root-url https://ghcr.io/v2/mmalenic/homebrew-evlist \
             "$PULL_REQUEST"
 
-      - name: Upload bottles to GitHub Packages
-        id: pr-upload
+      - id: pr-upload
         working-directory: ${{ steps.pr-pull.outputs.bottle_path }}
         env:
           HOMEBREW_GITHUB_PACKAGES_USER: mmalenic
@@ -42,13 +41,13 @@ jobs:
             --debug \
             --root-url= https://ghcr.io/v2/mmalenic/homebrew-evlist
 
-      - name: Push commits
+      - id: push
         uses: Homebrew/actions/git-try-push@master
         with:
           token: ${{ github.token }}
           branch: main
 
-      - name: Delete branch
+      - id: delete-branch
         if: github.event.pull_request.head.repo.fork == false
         env:
           BRANCH: ${{ github.event.pull_request.head.ref }}
