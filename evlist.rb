@@ -10,9 +10,8 @@ class Evlist < Formula
   head "https://github.com/mmalenic/evlist.git", branch: "main"
 
   bottle do
-    root_url "https://ghcr.io/v2/mmalenic/homebrew-evlist"
-    sha256 cellar:       :any_skip_relocation,
-           x86_64_linux: "1c6a6586e700201fef630362dcc74164487996d14b856ce2a7c93d011b3b6014"
+    root_url "https://ghcr.io/v2/mmalenic/evlist"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4420f83932785231bb92d83da9a101aa9c984da7b32f5ac0e9ebddea02c4c630"
   end
 
   depends_on "cmake" => :build
