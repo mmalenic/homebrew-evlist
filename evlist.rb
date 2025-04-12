@@ -4,8 +4,8 @@
 class Evlist < Formula
   desc "List input event devices on Linux"
   homepage "https://github.com/mmalenic/evlist"
-  url "https://github.com/mmalenic/evlist/archive/refs/tags/v1.0.4.tar.gz"
-  sha256 "e2ef682c2f1ac297f093047fce883f8d9aa36ea9cbc8ee3fd874223e7a0e3d39"
+  url "https://github.com/mmalenic/evlist/archive/refs/tags/v1.0.5.tar.gz"
+  sha256 "45159914d2b248d3a04876b8c1e966844410998d5af15f1ba5e0da1fcb325426"
   license "MIT"
   head "https://github.com/mmalenic/evlist.git", branch: "main"
 
@@ -23,8 +23,8 @@ class Evlist < Formula
   end
 
   resource "toolbelt" do
-    url "https://github.com/mmalenic/cmake-toolbelt/archive/refs/tags/v0.3.0.tar.gz"
-    sha256 "562b36ded37f884494b0d74bd13f4f4a6494521ee1ec9adff546922c9c8be649"
+    url "https://github.com/mmalenic/cmake-toolbelt/archive/refs/tags/v0.3.1.tar.gz"
+    sha256 "cbe46d02b9e49c9ba592187e3b8df4b6e503d871b5e1851f6ed0520ad0661943"
   end
 
   def install
