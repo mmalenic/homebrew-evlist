@@ -11,7 +11,7 @@ class Evlist < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/mmalenic/evlist"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "0235793b844b2db2e1c371112994583c8f26d84e095b752a5a069a9984422e1e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5d46bb20705958a82e3b6565d7d559045ff5145397f7655a456da6406608cc5c"
   end
 
   depends_on "cmake" => :build
